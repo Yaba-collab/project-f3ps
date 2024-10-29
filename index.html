@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT F3PS - Farm Produce Price Prediction System</title>
+    <link rel="icon" href="image/LOGOF.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <style>
+        /* Set the size of the map container */
+        #mapContainer {
+            width: 100%;
+            height: 400px; /* Adjust height as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo-container">
+            <a href="#Home"><img src="image/LOGOF.png" alt="alt=" Project F3PS Logo" class="logo"></a>
+        </div>
+        <!-- Toggle Button for Smaller Screens -->
+        <div class="menu-toggle" onclick="toggleNav()">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="/about us.html" target="_blank">About Us</a></li>
+                <li>
+                    <a href="#features">Features</a>
+                    <ul class="dropdown">
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#mapping">Mapping</a></li>
+                        <li><a href="#alerts">Real-Time Alerts</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#regions">Select Region</a>
+                    <ul class="dropdown">
+                        <li><a href="#north">North</a></li>
+                        <li><a href="#south">South</a></li>
+                        <li><a href="#east">East</a></li>
+                        <li><a href="#west">West</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact.html" target="_blank">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>You don land for PROJECT F3PS</h1>
+            <p>See farm goods price sharp-sharp, make you fit plan well ahead.</p>
+            <button id="get-started-button" onclick="location.href='#dashboard'">Make We Start</button>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard">
+        <h2>Dashboard Overview</h2>
+        <div class="filter-options">
+            <label for="season-select">Select Season:</label>
+            <select id="season-select">
+                <option value="dry">Dry Season</option>
+                <option value="rainy">Rainy Season</option>
+            </select>
+
+            <label for="crop-select">Select Crop:</label>
+            <select id="crop-select">
+                <option value="maize">Maize</option>
+                <option value="yam">Yam</option>
+                <option value="cassava">Cassava</option>
+                <option value="rice">Rice</option>
+                <option value="millet">Millet</option>
+                <option value="sorghum">Sorghum</option>
+                <option value="cocoa">Cocoa</option>
+                <option value="beans">Beans</option>
+            </select>
+        </div>
+
+        <div class="dashboard-cards">
+            <div class="card" id="price-card">
+                <img src=/maize-image.jpeg alt="Selected Crop" id="crop-image">
+                <h3 id="crop-title">Maize - Predicted Price</h3>
+                <p id="price-dry">₦100000 - ₦120000 per bag (Dry Season)</p>
+                <p id="price-rainy">₦80000 - ₦100000 per bag (Rainy Season)</p>
+            </div>
+        </div>
+
+
+        <div class="additional-info">
+            <div class="card">
+                <h3>Election Year Impact</h3>
+                <p>Price Fluctuation: +10% (Typical election year)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="mapping">
+        <h2>Di best prices wey people dey buy for Nigeria regions</h2>
+        <div id="mapContainer">
+            <!-- Placeholder for the map displaying regions -->
+        </div>
+        <div class="dropdown-container">
+            <label for="regionDropdown">Select Region:</label>
+            <select id="regionDropdown">
+                <option value="north">North</option>
+                <option value="south">South</option>
+                <option value="east">East</option>
+                <option value="west">West</option>
+            </select>
+        </div>
+        <div id="priceTrends">
+            <h3>Trending Crops and Beta Prices</h3>
+            <ul id="trendingPricesList">
+                <!-- This list will be dynamically populated with trending crop prices -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 PROJECT F3PS. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

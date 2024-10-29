@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Set a clean font for the body */
+    line-height: 1.6; /* Improve readability */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Dark text color */
+}
+
+::-webkit-scrollbar {
+    background-color: #e32727;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    height: 10px;
+    border-radius: 20px;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #ff7acc; /* Header background color */
+    padding: 20px; /* Space around the header */
+    text-align: center; /* Center align the text */
+    color: white; /* Text color */
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2.5em; /* Increase font size for the header */
+}
+
+/* Section Styles */
+section {
+    padding: 20px; /* Space inside the section */
+    max-width: 800px; /* Max width for content */
+    margin: 20px auto; /* Center the section on the page */
+    background: white; /* White background for section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h3 {
+    color: #ff7acc; /* Color for subheadings */
+}
+
+/* Link Styles */
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: #ff7acc; /* Link color */
+    font-weight: bold; /* Bold links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* General Form Styles */
+form {
+    margin-top: 20px; /* Space above the form */
+    padding: 20px; /* Padding inside the form */
+    background: #f9f9f9; /* Light background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+label {
+    display: block; /* Stack labels and inputs */
+    margin: 10px 0 5px; /* Spacing around labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 4px; /* Rounded corners for inputs */
+    margin-bottom: 15px; /* Space below inputs */
+}
+
+button {
+    background-color: #ff7acc; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Padding around button text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    
+}
+
+button:hover {
+    background-color: #e667a1; /* Darker shade on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center; /* Center the footer text */
+    padding: 20px; /* Padding around the footer */
+    background-color: #ff7acc; /* Footer background color */
+}
+
+footer a {
+    color: white; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+
+/* Responsive Styles */
+@media (max-width: 689px) {
+    h1 {
+        font-size: 2em; /* Adjust font size for smaller screens */
+    }
+
+    section {
+        padding: 10px; /* Reduce padding on smaller screens */
+        margin: 10px; /* Reduce margin on smaller screens */
+    }
+
+    button {
+        width: 100%; /* Make button full width on smaller screens */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 8px; /* Smaller padding for inputs */
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em; /* Further reduce font size for very small screens */
+    }
+
+    section {
+        padding: 5px; /* Even less padding on very small screens */
+        margin: 5px; /* Reduce margin on very small screens */
+    }
+
+    h3 {
+        font-size: 1.5em; /* Reduce size of subheadings */
+    }
+
+    button {
+        padding: 8px; /* Smaller button padding */
+        font-size: 0.9em; /* Adjust button font size */
+    }
+
+    label {
+        font-size: 0.9em; /* Smaller font size for labels */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 0.9em; /* Adjust font size for inputs */
+    }
+}

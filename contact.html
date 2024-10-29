@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PROJECT F3PS</title>
+    <link rel="stylesheet" href="contact.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    
+    <section>
+        <h3>Contact Information</h3>
+        <p>
+            Feel free to reach out to us 24/7 at the following phone numbers: <strong>+2348133974376, +2348135196537, 
+            +2348039153227</strong>. Alternatively, you can email us at <strong>info@f3ps.com</strong>, and we will respond promptly.
+        </p>
+
+        <h3>Our Head Office</h3>
+        <p>
+            Address: <strong>No 5 Amole Bye-Pass, Bola-Ige Junction, Liberty Road, Ibadan, Oyo State, Nigeria</strong>.<br>
+            Phone: <strong>+2348133974376, +2348135196537, +2348039153227</strong><br>
+            Email: <strong>info@f3ps.com</strong>
+        </p>
+
+        <h3>Send Us a Message</h3>
+        <form id="contact-form" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+    
+            if (name === "") {
+                alert("Please enter your name.");
+                return false; // Prevent form submission
+            }
+    
+            if (email === "") {
+                alert("Please enter your email.");
+                return false; // Prevent form submission
+            }
+    
+            // Simple email validation regex
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return false; // Prevent form submission
+            }
+    
+            if (message === "") {
+                alert("Please enter your message.");
+                return false; // Prevent form submission
+            }
+    
+            // If all validations pass, allow form submission and show success message
+            alert("Message submitted. Thank you for contacting us!");
+            return true; // Allow form submission
+        }
+    </script>
+    
+</body>
+<footer>
+    <a href="index.html">Return to Home Page</a> <!-- Link back to the index page -->
+</footer>
+</html>

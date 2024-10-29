@@ -1,0 +1,77 @@
+/* Global Styles */
+body {
+    font-family: sans-serif; /* Change font family as needed */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Dark text color for readability */
+}
+
+::-webkit-scrollbar {
+    background-color: #e32727;
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    height: 10px;
+    border-radius: 20px;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ff7acc; /* Header background color */
+    padding: 20px; /* Padding around the header */
+    text-align: center; /* Center the header text */
+}
+
+header h1 {
+    font-size: 2.5em; /* Larger font size for the title */
+    margin: 0; /* Remove default margin */
+    color: white; /* White text color */
+}
+
+/* Section Styles */
+section {
+    padding: 150px  20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(image/farmersatwork.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    text-align: center;
+}
+
+/* Content Styles */
+.content {
+    line-height: 1.8; /* Increase line height for readability */
+}
+
+.content p {
+    font-size: 1.2em; /* Increased font size for paragraphs */
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+
+/* Footer Styles */
+footer {
+    text-align: center; /* Center the footer text */
+    padding: 20px; /* Padding around the footer */
+    background-color: #ff7acc; /* Footer background color */
+}
+
+footer a {
+    color: white; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
